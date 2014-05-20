@@ -35,7 +35,7 @@ class EventListener implements ActionListener{
 add(browse);
 browse.addActionListener(new ClassBrowse());
      
-       JOptionPane.showMessageDialog(new JFrame(), "Нормалізований ряд", 10, 20); 
+       JOptionPane.showMessageDialog(new JFrame(), "Початковий ряд", 10, 20); 
     } 
         g.drawRect(10, 40, 300, 100);
         JButton button1 = new JButton("обробити");   //створюємо кнопку, при натисканні якої ряд буде нормалізуватися
