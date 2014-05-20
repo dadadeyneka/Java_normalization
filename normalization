@@ -1,0 +1,55 @@
+import javax.swing.JFrame; 
+import javax.swing.JPanel; 
+import javax.swing.JButton; 
+import java.awt.event.*;
+import javax.swing.JOptionPane;
+{
+   public static void main(String[] args)
+   {
+      MyFrame frame = new MyFrame();
+ 
+      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+      frame.setVisible(true);
+   }
+}
+ 
+class MyFrame extends JFrame
+{
+ 
+   public MyFrame()
+   {
+      setSize(FRAME_WIDTH, FRAME_HEIGHT);
+      PaintPanel panel=new PaintPanel();
+      add(panel);
+   }
+ 
+   public static final int FRAME_WIDTH = 350;
+   public static final int FRAME_HEIGHT = 200;     
+}
+ 
+class EventListener implements ActionListener{
+  
+   public void actionPerformed(ActionEvent event)
+   {
+      JButton browse= new JButton("Browse");
+add(browse);
+browse.addActionListener(new ClassBrowse());
+     
+       JOptionPane.showMessageDialog(new JFrame(), "Нормалізований ряд", 10, 20); 
+    } 
+        g.drawRect(10, 40, 300, 100);
+        JButton button1 = new JButton("обробити");   //створюємо кнопку, при натисканні якої ряд буде нормалізуватися
+     panel.add(button1);          
+    }
+
+class PaintPanel extends JPanel
+{
+    public void paintComponent(Graphics g)
+    {
+        super.paintComponent (g);
+        g.drawString("нормалізований ряд:", 10, 20);
+        g.drawRect(10, 40, 300, 100);
+     
+    }
+
+class EventListener implements ActionListener{
